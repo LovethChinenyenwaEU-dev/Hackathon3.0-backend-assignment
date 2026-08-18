@@ -62,71 +62,228 @@
 # list = string.split(" ")
 
 # exercise10
-# Your starting dictionary
-my_dict = {'a': 1, 'b': 2, 'c': 3}
-keys_list = list(my_dict.keys())
-print(keys_list)  
-values_list = list(my_dict.values())
-print(values_list)  
+student = {
+    "name": "Lkhibra Academy",
+    "age": 5,
+    "language": "Python"
+}
+
+keys = list(student.keys())
+values = list(student.values())
+
+print("Keys:", keys)
+print("Values:", values)
+
+#exercise11
+
+number1 = 10
+number2 = 5
+
+addition = number1 + number2
+subtraction = number1 - number2
+multiplication = number1 * number2
+division = number1 / number2
+modulus = number1 % number2
+
+print("Addition:", addition)
+print("Subtraction:", subtraction)
+print("Multiplication:", multiplication)
+print("Division:", division)
+print("Modulus:", modulus)
+
+#exercise12
+number1 = 10
+number2 = 5
+
+print("10 > 5:", number1 > number2)
+print("10 < 5:", number1 < number2)
+print("10 == 10:", number1 == 10)
+print("10 != 5:", number1 != number2)
+print("10 >= 5:", number1 >= number2)
+print("10 <= 5:", number1 <= number2)
 
 
-exercise11
-a = 15
-b = 4
+#exercise13
+print("True and False:", True and False)
+print("True or False:", True or False)
+print("Not True:", not True)
 
-addition = a + b
-subtraction = a - b
-multiplication = a * b
-division = a / b
-modulus = a % b
+#exercise14
+number = 10
 
-print(f"Addition ({a} + {b}): {addition}")
-print(f"Subtraction ({a} - {b}): {subtraction}")
-print(f"Multiplication ({a} * {b}): {multiplication}")
-print(f"Division ({a} / {b}): {division}")
-print(f"Modulus ({a} % {b}): {modulus}")
+print("Initial Value:", number)
 
-exercise12
-num1 = 15
-num2 = 10
+number += 5
+print("After += :", number)
 
-print(f"Comparing {num1} and {num2}:\n")
+number -= 3
+print("After -= :", number)
 
-print(f"{num1} == {num2} : {num1 == num2}")
+number *= 2
+print("After *= :", number)
 
-print(f"{num1} != {num2} : {num1 != num2}")
+number /= 3
+print("After /= :", number)
 
-print(f"{num1} > {num2}  : {num1 > num2}")
-
-print(f"{num1} < {num2}  : {num1 < num2}")
-
-print(f"{num1} >= {num2} : {num1 >= num2}")
-
-print(f"{num1} <= {num2} : {num1 <= num2}")
+number %= 2
+print("After %= :", number)
 
 
-exercise13
-# Example 1: Using and
-a = True
-b = False
-print(a and b)  # Output: False, because both must be True
+#exercise15
+print("5 & 3 =", 5 & 3)
+print("5 | 3 =", 5 | 3)
+print("5 ^ 3 =", 5 ^ 3)
+print("5 << 1 =", 5 << 1)
+print("5 >> 1 =", 5 >> 1)
 
-# Example 2: Using or
-print(a or b)  # Output: True, because at least one is True
+#exercise16
+number = int(input("Enter a number: "))
 
-# Example 3: Using not
-print(not a)  # Output: False, negates True
-print(not b)  # Output: True, negates False
+if number % 2 == 0:
+    print(number, "is an even number.")
+else:
+    print(number, "is an odd number.")
 
-exercise14
-# Example 1: Using and
-a = True
-b = False
-print(a and b)  # Output: False, because both must be True
+#exercise17
+a, b, c = map(int, input("Enter three numbers: ").split())
 
-# Example 2: Using or
-print(a or b)  # Output: True, because at least one is True
+if a > b and a > c:
+    largest = a
+elif b > a and b > c:
+    largest = b
+else:
+    largest = c
 
-# Example 3: Using not
-print(not a)  # Output: False, negates True
-print(not b)  # Output: True, negates False
+print(f"The largest number is {largest}.")
+
+#exercise18
+year = int(input("Enter a year: "))
+
+if year % 400 == 0 or (year % 4 == 0 and year % 100 != 0):
+    print(year, "is a leap year.")
+else:
+    print(year, "is not a leap year.")
+
+ #exercise19
+score = int(input("Enter your score: "))
+
+if score >= 90:
+    grade = "A"
+elif score >= 80:
+    grade = "B"
+elif score >= 70:
+    grade = "C"
+elif score >= 60:
+    grade = "D"
+else:
+    grade = "F"
+
+print(f"Score: {score} -> Grade: {grade}")
+
+#exercise20
+email = "john@example.com"
+
+domain = email.split("@")[1]
+
+print("Domain:", domain)
+
+#exercise21
+review = "The quality of this product is good. The quality is impressive and the quality is excellent."
+
+print("The word 'quality' appears", review.count("quality"), "times.")
+
+#exercise22
+item1 = "Laptop"
+price1 = 1200.99
+
+item2 = "Mouse"
+price2 = 25.50
+
+print("Item        Price")
+print("-------------------")
+print(f"{item1:<12} ${price1:.2f}")
+print(f"{item2:<12} ${price2:.2f}")
+
+#exercise23
+sentence = "Lkhibra Academy is great"
+
+words = sentence.split()
+words.reverse()
+
+sentence = " ".join(words)
+
+print(sentence)
+
+#exercise24
+post = "Loving #Python and #Coding at #LkhibraAcademy"
+
+words = post.split()
+hashtags = []
+
+for word in words:
+    if word.startswith("#"):
+        hashtags.append(word)
+
+print("Hashtags:", hashtags)
+
+#exercise25
+password = input("Enter your password: ")
+
+has_number = False
+has_special = False
+
+special_characters = "!@#$%^&*"
+
+for character in password:
+    if character.isdigit():
+        has_number = True
+
+    if character in special_characters:
+        has_special = True
+
+if len(password) >= 8 and has_number and has_special:
+    print("Password is strong.")
+else:
+    print("Password is not strong.")
+
+#exercise26
+text = " Hello   World  !  "
+
+text = text.strip()
+words = text.split()
+text = " ".join(words)
+
+print(text)
+
+#exercise27
+text = "lkhibra academy python training"
+
+text = text.title()
+
+print(text)
+
+#exercise28
+text = "I love Python programming"
+
+text = text.replace("Python", "Java")
+
+print(text)
+
+#exercise29
+filename = input("Enter a filename: ")
+
+if filename.startswith("report") and filename.endswith(".pdf"):
+    print("This is a valid report PDF file.")
+else:
+    print("This is not a valid report PDF file.")
+
+#exercise30
+text = input("Enter a word or phrase: ")
+
+text = text.lower()
+text = text.replace(" ", "")
+
+if text == text[::-1]:
+    print(text, "is a palindrome!")
+else:
+    print(text, "is not a palindrome.")
